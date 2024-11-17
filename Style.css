@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #f8b6c2, #b3e5fc);
+    color: #333;
+    position: relative;
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    position: relative;
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Posición inicial para el efecto de desplazamiento */
+    animation: fadeIn 2s ease-out forwards; /* Aplicar la animación */
+}
+.header, .details, .additional-content, .footer, .images img {
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.header {
+    animation-delay: 0.5s;
+}
+
+.details {
+    animation-delay: 1s;
+}
+
+.additional-content {
+    animation-delay: 1.5s;
+}
+
+.footer {
+    animation-delay: 2s;
+}
+
+.images img {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.header {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.details {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.footer {
+    margin-top: 30px;
+    font-size: 14px;
+}
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+img {
+    max-width: 15%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: swing 3s ease-in-out infinite;
+}
+
+.aditional {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+}
+.buttons {
+    margin-top: 20px;
+}
+
+button.whatsapp {
+    background-color: #25D366; /* Verde de WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.whatsapp:hover {
+    background-color: #1ebf5a;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .images img {
+        max-width: 45%; /* Ajuste para que las imágenes sean más pequeñas en pantallas móviles */
+    }
+
+    .header, .details, .additional-content, .footer {
+        font-size: 16px; /* Ajustar el tamaño de la fuente para dispositivos móviles */
+    }
+
+    button {
+        width: 80%; /* Botones más grandes en pantallas móviles */
+        padding: 12px;
+    }
+}
