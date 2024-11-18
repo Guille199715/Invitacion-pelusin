@@ -17,6 +17,7 @@ body {
     transform: translateY(20px); /* Posición inicial para el efecto de desplazamiento */
     animation: fadeIn 2s ease-out forwards; /* Aplicar la animación */
 }
+
 .header, .details, .additional-content, .footer, .images img {
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
@@ -56,10 +57,33 @@ body {
     font-size: 18px;
     margin: 20px 0;
 }
+
 .footer {
     margin-top: 30px;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    position: relative;
 }
+
+.footer p {
+    margin: 0 20px; /* Espacio entre el texto y las imágenes */
+}
+
+.footer-image.left {
+    margin-right: 10px; /* Ajusta el espacio entre la imagen y el texto */
+    width: 40px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+}
+
+.footer-image.right {
+    margin-left: 10px; /* Ajusta el espacio entre la imagen y el texto */
+    width: 60px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+}
+
 @keyframes swing {
     0% {
         transform: rotate(0deg);
@@ -84,13 +108,18 @@ img {
     animation: swing 3s ease-in-out infinite;
 }
 
-.aditional {
+.additional {
     font-size: 16px;
     margin-top: 20px;
     text-align: center;
 }
 .buttons {
     margin-top: 20px;
+    text-align: center;
+}
+
+.buttons a {
+    display: inline-block;
 }
 
 button.whatsapp {
